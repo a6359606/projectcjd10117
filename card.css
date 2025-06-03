@@ -1,0 +1,251 @@
+.card-list {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    
+}
+/* /各卡片設定 */ 
+.card {
+    width: 285px;
+    height: 498px;
+    margin: 7.5px;
+}     
+
+/* 各照片容器設定 */
+.pic{
+    width: 285px;
+    height: 247px;
+    overflow: hidden;
+}
+
+
+/* 照片容器內照片設定 */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* 各文字區塊設定 */
+.txt{
+    width: 285px;
+    box-sizing:border-box;       
+    padding: 10px 0;          
+            
+}
+
+/* 各h3文字區塊設定 */
+.txt h3{
+    font-size: 22px;
+    letter-spacing: 6.6px;
+    text-align: center; 
+    margin: 10px 0 auto;         
+    font-weight: 400;
+    margin-top: 30px;
+} 
+
+/* 各文字段落區塊設定 */
+.txt p {
+    font-size: 16px;
+    letter-spacing: 4.8px;
+    margin: 10px 0;
+    line-height: 32px;
+}
+
+    
+.button-box{
+    margin-top: 20px;          
+    text-align: center;   
+}
+
+
+/* 完整行程按鈕 */
+.button-box button{
+    width: 121px;
+    height: 35px;
+    background-color:white;
+    font-size: 16px;
+    letter-spacing: 4.8px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+button a.link-button {
+    text-decoration: none;     /* 移除底線 */
+    color: rgb(0, 0, 0);             
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2;          /* 控制垂直置中，可調整 */
+}
+
+
+.card-title {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+        
+.title-name {
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 8.4px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    letter-spacing: 8px;
+    padding-left: 10px;
+}
+
+.title-name .star{
+color:rgb(255,206, 49);
+}
+
+/* 城市卡片群組 */
+
+.city .card-list{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Jpcity{
+    flex: 1;
+    position: relative;
+    transition: flex 0.3s ease;
+    overflow: hidden;
+    width: 220px;
+    height: 287px;
+    margin:10;
+}
+
+.Jpcity img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Jpcity .name{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    background: rgba(0,0,0,);
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 22px;
+    letter-spacing: 6.6px;
+}
+
+/* 預設放大第一張 */
+.city card-list:hover .card {
+    flex: 1;
+}
+
+.city card-list:not(:hover) 
+.card:first-child {
+    flex: 2;
+}
+
+/* 滑鼠移到某一張時放大該張 */
+.Jpcity:hover {
+    flex: 2;
+}
+
+
+/* 整體頁尾背景與置中 */
+.footer {
+    background-color: #f1effb;
+    padding: 40px 20px;
+    margin-top: 100px;
+}
+
+/* 頁尾容器寬度為1200px並置中 */
+.footer-container {
+    max-width: 1200px;
+    height: 245px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 每一欄的樣式 */
+.footer-column {
+    flex: 1 1 200px;
+    text-align: center; 
+    /* 文字置中 */
+}
+
+
+
+.footer-column h4 {
+    font-size: 20px;
+    letter-spacing: 6px;
+    margin-top: 5px;
+    margin-bottom:10px;
+}
+
+/* 列表樣式 */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.footer-column a {
+    text-decoration: none; /* 移除底線 */
+    color: inherit;         /* 使用原本文字顏色 */
+    display: inline-block;  /* 保持與 <li> 配合 */
+}
+
+
+
+
+
+.footer-column li {
+    font-size: 16px;
+    letter-spacing: 4.8px;
+    margin: 10px 0;
+    line-height: 40px;
+    
+    margin-bottom: 15px;
+    
+}
+
+/* 圖示群組排版 */
+.icon-group {
+    
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 一行兩個 icon */
+    gap: 20px 40px; /* 上下左右間距更均勻 */
+    justify-content: center; /* 整體置中對齊 */
+    margin-top: 40px;
+}
+
+
+/* 所有圖示統一大小 */
+.icon-group img {
+    width: 45px;
+
+}
+
+
+.f-txt .top{
+margin-top: 25px;
+}
+

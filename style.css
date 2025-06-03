@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+
+
+body {
+    background-color: white;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.button{
+    font-size: 16px;
+    letter-spacing: 4.8px;
+
+}
+
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 20px;
+    gap: 10px; 
+    font-size: 16px;
+    letter-spacing: 4.8px;
+}
+
+/* LOGO */
+.logo {
+    position: static;
+    transform: none;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+}
+
+/* 左右導覽列 */
+.nav-left,
+.nav-right {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a,
+.dropdown button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 1.5; 
+    display: flex;    
+    align-items: center; 
+}
+
+/* 下拉選單 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Banner 區塊 */
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1920px; 
+    height: 444px; 
+    margin: 10px auto; 
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    color:rgb(0,0,0);
+    width: 900px;
+    height: 200px;
+    font-size: 36px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 700;
+}
+
+.banner-text h1 {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size:28px;
+    letter-spacing:8.4px;
+    margin-bottom: 15px;
+}
+
+.banner-text input {
+    padding: 10px;
+    width: 680px;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 90px;
+}
+
+.banner-text button {
+    padding: 10px 20px;
+    background-color: #4cb6b0;
+    width: 120px;
+    height: 52px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.carousel-btn {
+    background-color: white;
+    border:  #ccc;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
