@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
 
 
@@ -10,11 +10,12 @@
 body {
     background-color: white;
     font-family: 'Alegreya Sans', sans-serif;
+    overflow-x: hidden;
 }
 
-.button{
+.button {
     font-size: 16px;
-    letter-spacing: 4.8px;
+    letter-spacing: 1.6px;
 
 }
 
@@ -25,25 +26,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
-    padding: 20px;
-    gap: 10px; 
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 7.5px;
+    margin-top: -30px;
     font-size: 16px;
-    letter-spacing: 4.8px;
+    letter-spacing: 1.6px;
 }
 
 /* LOGO */
 .logo {
     position: static;
     transform: none;
-    margin: 0 auto; 
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo img {
-    width: 250px;
+    width: 150px;
 }
 
 /* 左右導覽列 */
@@ -66,47 +68,110 @@ nav a,
     text-decoration: none;
     font-size: 16px;
     padding: 5px 10px;
-    line-height: 1.5; 
-    display: flex;    
-    align-items: center; 
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
 }
+
+
+
 
 /* 下拉選單 */
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
     display: none;
     background: white;
     border: 1px solid #ccc;
-    min-width: 150px;
+    min-width: 100px;
     z-index: 10;
+    padding: 0px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
 
+
+
+
+
+/* ✅ 分隔線樣式 */
 .dropdown-menu a {
     display: block;
     padding: 8px 12px;
     color: #333;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
+    border-bottom: 0.1px solid black;
+
 }
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu[class^="menu-"] a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+
+
+.dropdown-menu.menu-60 {
+    min-width: 60px;
+}
+
+
+
+.dropdown-menu.menu-80 {
+    min-width: 80px;
+
+}
+
+
+.dropdown-menu.menu-100 {
+    min-width: 100px;
+}
+
+
+.dropdown-menu.menu-114 {
+    min-width: 114px;
+}
+
+
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
 
 
 /* Banner 區塊 */
 .banner {
     position: relative;
     width: 100%;
-    max-width: 1920px; 
-    height: 444px; 
-    margin: 10px auto; 
+    max-width: 1920px;
+    height: 444px;
+    margin: 10px auto;
+    margin-top: -30px;
     overflow: hidden;
 }
 
@@ -122,9 +187,9 @@ nav a,
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    text-align: center; 
-    color:rgb(0,0,0);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
     width: 900px;
     height: 200px;
     font-size: 36px;
@@ -134,29 +199,10 @@ nav a,
 
 .banner-text h1 {
     font-family: 'Alegreya Sans', sans-serif;
-    font-size:28px;
-    letter-spacing:8.4px;
-    margin-bottom: 15px;
-}
+    font-size: 28px;
+    letter-spacing: 1.6px;
+    margin-top: 110px;
 
-.banner-text input {
-    padding: 10px;
-    width: 680px;
-    height: 54px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 90px;
-}
-
-.banner-text button {
-    padding: 10px 20px;
-    background-color: #4cb6b0;
-    width: 120px;
-    height: 52px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 
@@ -168,14 +214,212 @@ nav a,
 
 .carousel-btn {
     background-color: white;
-    border:  #ccc;
-    font-size: 20px;
+    border: 1px solid #ccc;
+    ;
+    font-size: 22px;
     width: 40px;
     height: 40px;
     cursor: pointer;
     position: relative;
     z-index: 1;
 }
+
+
+/* 1. 平板寬度調整：768px 以下 */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-left,
+    .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .banner-text {
+        width: 90%;
+        font-size: 24px;
+        height: auto;
+    }
+
+    .banner-text h1 {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .txt {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .txt h3 {
+        font-size: 20px;
+    }
+
+    .txt p {
+        font-size: 16px;
+    }
+
+    .info-row .text,
+    .inforow .text {
+        font-size: 16px;
+    }
+
+    .location-overlay {
+        font-size: 14px;
+        bottom: 190px;
+    }
+
+    .location-overlay .icon img {
+        width: 28px;
+    }
+
+    .title-name {
+        font-size: 22px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .card-title {
+        width: 100%;
+    }
+
+    .International-City {
+        width: 48%;
+        height: 200px;
+    }
+
+    .International-City .name {
+        font-size: 16px;
+        padding: 3px 6px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .icon-group {
+        justify-content: center;
+    }
+}
+
+/* 2. 手機寬度：480px 以下，卡片與內容再收窄  */
+@media (max-width: 480px) {
+    .banner-text h1 {
+        font-size: 18px;
+
+    }
+
+    .city .card-list {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 320px;
+    }
+
+    .txt h3 {
+        font-size: 18px;
+    }
+
+    .txt p {
+        font-size: 14px;
+        padding-left: 32px;
+    }
+
+
+    .price {
+        font-size: 18px;
+        
+    }
+
+    .price .currency,
+    .price .note {
+        font-size: 14px;
+    }
+
+    .International-City {
+        width: 90vw;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .International-City:active {
+        transform: scale(1.05);
+        z-index: 1;
+    }
+
+
+    .International-City img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 13;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    .International-City .name {
+        font-size: 14px;
+    }
+
+    .location-overlay {
+        top: 0.5%;
+        left: 0.5%;
+        bottom: auto;
+    }
+
+    .location-overlay .icon img {
+        width: 24px;
+    }
+
+    .location-overlay .text {
+        font-size: 14px;
+    }
+
+    .inforow {
+        justify-content: flex-start;
+        padding-left: 26px;
+    }
+
+    .inforow .icon {
+        margin-right: 6px;
+        width: 24px;
+    }
+
+    .inforow .text {
+        font-size: 14px;
+    }
+}
+
 
 
 

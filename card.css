@@ -1,24 +1,35 @@
 .card-list {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 80px;
-    
+    margin: 50px auto 80px;
+    justify-content: center;
 }
-/* /各卡片設定 */ 
+
+/* /各卡片設定 */
 .card {
-    width: 285px;
-    height: 498px;
-    margin: 7.5px;
-}     
+    flex: 1 1 calc(25% - 20px);
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 /* 各照片容器設定 */
-.pic{
-    width: 285px;
+.pic {
+    width: 100%;
     height: 247px;
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -28,137 +39,222 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
+    display: block;
+
 }
 
+
+
+
+.location-overlay {
+
+    position: absolute;
+    top: 0.5%;
+    left: 0.5%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    color: white;
+}
+
+
+
+.location-overlay .icon img {
+    width: 40px;
+    margin-right: 2px;
+    filter: brightness(30) drop-shadow(0 0 4px rgb(255, 255, 255));
+}
+
+
+
+
+
 /* 各文字區塊設定 */
-.txt{
-    width: 285px;
-    box-sizing:border-box;       
-    padding: 10px 0;          
-            
+.txt {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0px;
+
 }
 
 /* 各h3文字區塊設定 */
-.txt h3{
+.txt h3 {
     font-size: 22px;
-    letter-spacing: 6.6px;
-    text-align: center; 
-    margin: 10px 0 auto;         
+    letter-spacing: 1.6px;
+    text-align: center;
+    margin: 12px 0 4px;
     font-weight: 400;
-    margin-top: 30px;
-} 
+
+}
 
 /* 各文字段落區塊設定 */
 .txt p {
-    font-size: 16px;
-    letter-spacing: 4.8px;
-    margin: 10px 0;
-    line-height: 32px;
-}
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    padding: 16px;
+    line-height: 20px;
 
-    
-.button-box{
-    margin-top: 20px;          
-    text-align: center;   
 }
 
 
-/* 完整行程按鈕 */
-.button-box button{
-    width: 121px;
-    height: 35px;
-    background-color:white;
-    font-size: 16px;
-    letter-spacing: 4.8px;
-    border-radius: 14px;
-    cursor: pointer;
-}
 
-button a.link-button {
-    text-decoration: none;     /* 移除底線 */
-    color: rgb(0, 0, 0);             
-    display: inline-block;
-    width: 100%;
-    height: 100%;
+
+
+
+
+.card .info {   
+    padding: 0px 12px;
+    padding-bottom: 6px;
+    font-size: 20px;
+    letter-spacing: 1.6px;
+    color: #333;
     text-align: center;
-    line-height: 2;          /* 控制垂直置中，可調整 */
 }
+
+.info-row {
+    display: flex;
+    margin-top: 5px;
+    padding-right: 5px;
+    justify-content: center;
+}
+
+
+.inforow {
+    display: flex;
+    
+    }
+
+
+
+.info-row .icon,
+.inforow .icon {
+    margin-right: 6px;
+    width: 30px;
+
+}
+
+.info-row .text {
+    font-size: 20px;
+    letter-spacing: 1.6px;
+    
+}
+
+
+
+
+
+.inforow .text {
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    padding-top: 6px;
+}
+
+.price,
+.info-item .price {
+    font-size: 22px;
+    line-height: 2px;
+    letter-spacing: 1.6px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-top: 22px;
+}
+
+.price .currency {
+    font-size: 20px;
+    letter-spacing: 1.6px;
+    margin-right: 4px;
+    color: #666;
+
+}
+
+
+.price .note {
+    font-size: 18px;
+    margin-left: 4px;
+    color: #999;
+}
+
+
+
+
+
 
 
 .card-title {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 16px;
 
+    
 }
 
-        
+
 .title-name {
-    text-align: left;
+    text-align: center;
     font-size: 28px;
-    letter-spacing: 8.4px;
+    letter-spacing: 1.6px;
     font-weight: bold;
     margin-top: 100px;
-    margin-bottom: 50px;
-    letter-spacing: 8px;
-    padding-left: 10px;
+    margin-bottom: 40px;
 }
 
-.title-name .star{
-color:rgb(255,206, 49);
+.title-name .star {
+    color: rgb(255, 206, 49);
 }
 
 /* 城市卡片群組 */
 
-.city .card-list{
+.city .card-list {
     display: flex;
-    width: 100%;
+    gap: 20px;
     max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    justify-content: center;
 }
 
-.Jpcity{
+.International-City {
     flex: 1;
     position: relative;
     transition: flex 0.3s ease;
     overflow: hidden;
-    width: 220px;
     height: 287px;
-    margin:10;
+    
+    
 }
 
-.Jpcity img {
+.International-City img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.Jpcity .name{
+.International-City .name {
     position: absolute;
     bottom: 10px;
     left: 10px;
     color: white;
     font-weight: bold;
-    background: rgba(0,0,0,);
+    background: rgba(0, 0, 0, 0.5);
     padding: 5px 5px;
     border-radius: 5px;
     font-size: 22px;
-    letter-spacing: 6.6px;
+    letter-spacing: 1.6px;
 }
 
 /* 預設放大第一張 */
-.city card-list:hover .card {
+.city .card-list:hover .card {
     flex: 1;
 }
 
-.city card-list:not(:hover) 
-.card:first-child {
+.city .card-list:not(:hover) .card:first-child {
     flex: 2;
 }
 
 /* 滑鼠移到某一張時放大該張 */
-.Jpcity:hover {
+.International-City:hover {
     flex: 2;
 }
 
@@ -184,7 +280,7 @@ color:rgb(255,206, 49);
 /* 每一欄的樣式 */
 .footer-column {
     flex: 1 1 200px;
-    text-align: center; 
+    text-align: center;
     /* 文字置中 */
 }
 
@@ -192,9 +288,9 @@ color:rgb(255,206, 49);
 
 .footer-column h4 {
     font-size: 20px;
-    letter-spacing: 6px;
+    letter-spacing: 1.6px;
     margin-top: 5px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 /* 列表樣式 */
@@ -208,32 +304,42 @@ color:rgb(255,206, 49);
 
 
 .footer-column a {
-    text-decoration: none; /* 移除底線 */
-    color: inherit;         /* 使用原本文字顏色 */
-    display: inline-block;  /* 保持與 <li> 配合 */
+    text-decoration: none;
+    /* 移除底線 */
+    color: inherit;
+    /* 使用原本文字顏色 */
+    display: inline-block;
+    /* 保持與 <li> 配合 */
 }
 
-
-
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .footer-column li {
     font-size: 16px;
-    letter-spacing: 4.8px;
+    letter-spacing: 1.6px;
     margin: 10px 0;
     line-height: 40px;
-    
+
     margin-bottom: 15px;
-    
+
 }
 
 /* 圖示群組排版 */
 .icon-group {
-    
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* 一行兩個 icon */
-    gap: 20px 40px; /* 上下左右間距更均勻 */
-    justify-content: center; /* 整體置中對齊 */
+
+    /* display: grid;
+    grid-template-columns: repeat(2, auto); 一行兩個 icon */
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px 40px;
+    /* 上下左右間距更均勻 */
+    justify-content: center;
+    /* 整體置中對齊 */
     margin-top: 40px;
 }
 
@@ -241,11 +347,39 @@ color:rgb(255,206, 49);
 /* 所有圖示統一大小 */
 .icon-group img {
     width: 45px;
+    height: 45px;
+    object-fit: contain;
 
 }
 
-
-.f-txt .top{
-margin-top: 25px;
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
 }
+
+/* 付款方式圖示：橫向排列，每行最多三個，自動換行 */
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 180px; 
+}
+
+/* PayPal 圖示例外處理（如比例不同） */
+.payment-icons img.paypal {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+.f-txt .top {
+    margin-top: 25px;
+}
+
 
