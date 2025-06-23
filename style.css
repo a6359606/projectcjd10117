@@ -245,8 +245,7 @@ body {
 .hero-carousel .swiper-button-prev,
 .hero-carousel .swiper-button-next,
 .travel-card-carousel .swiper-button-prev,
-.travel-card-carousel .swiper-button-next
-{
+.travel-card-carousel .swiper-button-next {
     color: white;
     font-size: 20px;
     font-weight: 300;
@@ -270,7 +269,7 @@ body {
     gap: 40px;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color:#fff;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding-top: 30px;
     padding-left: 10px;
@@ -357,45 +356,114 @@ body {
 }
 
 .contact-button {
-    width: 220px;
-    max-width: 90%;
-    background-color: #0077cc;
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1.6px;
-    font-weight: bold;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: bold;
+    transition: background-color 0.8s ease;
+    font-size: 32px;
+    width: 220px;
 }
 
 .contact-button:hover {
-    background-color: #005fa3;
+    background-color: #0056b3;
 }
 
 .contact-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+    width: 40px;
+    height: 40px;
 }
 
 .location-overlay {
     display: flex;
-    align-items: center; 
-    gap: 6px;        
+    align-items: center;
+    gap: 6px;
 }
 
 .location-overlay .icon img {
-    width: 20px;          
-    height: 20px;       
-    object-fit: contain;  
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+.agent-section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 16px;
+}
+
+.agent-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1.6px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.agent-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.agent-card {
+    width: 400px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.agent-photo img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.agent-info {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.agent-info h3 {
+    font-size: 22px;
+    letter-spacing: 1.6px;
+    margin-bottom: 20px;
+    margin-top: 14px;
+    color: #234;
+
+}
+
+.agent-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    letter-spacing: 1.6px;
+}
+
+.agent-qr {
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+}
+
+.agent-qr img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
 }
 
 /* 1. 平板寬度調整：768px 以下 */
@@ -484,7 +552,7 @@ body {
 
     }
 
-    
+
     .card {
         max-width: 320px;
     }
@@ -551,7 +619,6 @@ body {
     .location-overlay .icon img {
         width: 24px;
         height: 24px
-        
     }
 
     .location-overlay .text {
@@ -562,8 +629,8 @@ body {
         /* justify-content: flex-start;
         padding-left: 26px; */
         display: flex;
-        align-items: center; 
-        gap: 6px;             
+        align-items: center;
+        gap: 6px;
         padding-left: 16px;
 
     }
@@ -574,10 +641,10 @@ body {
     }
 
     .inforow .icon img {
-    width: 20px;
-    height: 20px;          
-    object-fit: contain;   
-}
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
 
     .inforow .text {
         font-size: 14px;
@@ -640,11 +707,11 @@ body {
     }
 
     .travel-card-carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 
     .travel-card-info {
         gap: 12px;
@@ -668,11 +735,35 @@ body {
         width: 24px;
         height: 24px;
     }
+
+
+    .agent-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .agent-photo img {
+        height: 220px;
+    }
+
+    .agent-info h3 {
+        font-size: 20px;
+    }
+
+    .agent-info p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .agent-qr {
+        width: 160px;
+        margin-bottom: 10px;
+    }
+
+
+
+
+
+
+
 }
-
-
-
-
-
-
-
