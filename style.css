@@ -386,6 +386,18 @@ body {
     object-fit: contain;
 }
 
+.location-overlay {
+    display: flex;
+    align-items: center; 
+    gap: 6px;        
+}
+
+.location-overlay .icon img {
+    width: 20px;          
+    height: 20px;       
+    object-fit: contain;  
+}
+
 /* 1. 平板寬度調整：768px 以下 */
 @media (max-width: 768px) {
 
@@ -538,6 +550,8 @@ body {
 
     .location-overlay .icon img {
         width: 24px;
+        height: 24px
+        
     }
 
     .location-overlay .text {
@@ -545,8 +559,13 @@ body {
     }
 
     .inforow {
-        justify-content: flex-start;
-        padding-left: 26px;
+        /* justify-content: flex-start;
+        padding-left: 26px; */
+        display: flex;
+        align-items: center; 
+        gap: 6px;             
+        padding-left: 16px;
+
     }
 
     .inforow .icon {
@@ -554,8 +573,16 @@ body {
         width: 24px;
     }
 
+    .inforow .icon img {
+    width: 20px;
+    height: 20px;          
+    object-fit: contain;   
+}
+
     .inforow .text {
         font-size: 14px;
+        line-height: 1.4;
+        color: #333;
     }
 
     .map-container {
