@@ -8,6 +8,8 @@
     justify-content: center;
 }
 
+
+
 /* /各卡片設定 */
 .card {
     flex: 1 1 calc(25% - 20px);
@@ -205,8 +207,9 @@
 
 /* 城市卡片群組 */
 
-.city .card-list {
+.city-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -244,11 +247,11 @@
 }
 
 /* 預設放大第一張 */
-.city .card-list:hover .card {
+.city-list:hover .card {
     flex: 1;
 }
 
-.city .card-list:not(:hover) .card:first-child {
+.city-list:not(:hover) .card:first-child {
     flex: 2;
 }
 
@@ -301,7 +304,7 @@
 .itinerary-card {
     width: 100%;
     padding: 60px 20px;
-    
+
 }
 
 .itinerary-card-container {
@@ -357,6 +360,13 @@
 
 
 @media (max-width: 480px) {
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    
     .itinerary-card-container {
         flex-direction: column;
         gap: 24px;

@@ -7,7 +7,6 @@
 
 
 
-
 body {
     background-color: white;
     font-family: 'Alegreya Sans', sans-serif;
@@ -387,7 +386,85 @@ body {
     object-fit: contain;
 }
 
+/* 1. 平板寬度調整：768px 以下 */
+@media (max-width: 768px) {
 
+
+    .banner {
+        height: auto;
+    }
+
+    .banner-text {
+        width: 90%;
+        height: auto;
+    }
+
+    .banner-text h1 {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .txt {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .txt h3 {
+        font-size: 20px;
+    }
+
+    .txt p {
+        font-size: 16px;
+    }
+
+    .info-row .text,
+    .inforow .text {
+        font-size: 16px;
+    }
+
+    .location-overlay {
+        font-size: 14px;
+        bottom: 190px;
+    }
+
+    .location-overlay .icon img {
+        width: 28px;
+    }
+
+    .title-name {
+        font-size: 22px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .card-title {
+        width: 100%;
+    }
+
+    .International-City {
+        width: 48%;
+        height: 200px;
+    }
+
+    .International-City .name {
+        font-size: 16px;
+        padding: 3px 6px;
+    }
+
+
+
+}
 
 @media (max-width: 480px) {
     .banner-text h1 {
@@ -395,11 +472,7 @@ body {
 
     }
 
-    .city .card-list {
-        flex-direction: column !important;
-        align-items: center;
-    }
-
+    
     .card {
         max-width: 320px;
     }
@@ -423,6 +496,12 @@ body {
     .price .note {
         font-size: 14px;
     }
+
+    .city-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
 
     .International-City {
         width: 90vw;
@@ -570,82 +649,3 @@ body {
 
 
 
-/* 1. 平板寬度調整：768px 以下 */
-@media (max-width: 768px) {
-
-
-    .banner {
-        height: auto;
-    }
-
-    .banner-text {
-        width: 90%;
-        height: auto;
-    }
-
-    .banner-text h1 {
-        font-size: 22px;
-        margin-top: 40px;
-    }
-
-    .card-list {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .txt {
-        width: 100%;
-        padding: 10px 10px;
-    }
-
-    .txt h3 {
-        font-size: 20px;
-    }
-
-    .txt p {
-        font-size: 16px;
-    }
-
-    .info-row .text,
-    .inforow .text {
-        font-size: 16px;
-    }
-
-    .location-overlay {
-        font-size: 14px;
-        bottom: 190px;
-    }
-
-    .location-overlay .icon img {
-        width: 28px;
-    }
-
-    .title-name {
-        font-size: 22px;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .card-title {
-        width: 100%;
-    }
-
-    .International-City {
-        width: 48%;
-        height: 200px;
-    }
-
-    .International-City .name {
-        font-size: 16px;
-        padding: 3px 6px;
-    }
-
-
-
-}
