@@ -7,6 +7,7 @@
 
 
 
+
 body {
     background-color: white;
     font-family: 'Alegreya Sans', sans-serif;
@@ -20,145 +21,60 @@ body {
 }
 
 
-.header-container {
-    max-width: 1200px;
-    margin: auto;
+
+.header {
+    width: 100%;
+    max-width: 1800px;
+    margin: -10px auto 0 auto;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 7.5px;
-    margin-top: -30px;
-    font-size: 16px;
-    letter-spacing: 1.6px;
+    background-color: white;
+    position: relative;
 }
 
-/* LOGO */
+/* Logo 左上角 */
 .logo {
-    position: static;
-    transform: none;
-    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.logo img {
+.nav-logo {
     width: 150px;
+    margin-top: -6px;
+    margin-left: -18px;
 }
 
-/* 左右導覽列 */
-.nav-left,
-.nav-right {
-    flex: 1;
+
+/* 導覽列 (桌機) */
+.nav-list {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
-nav a,
-.dropdown button {
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #0077cc;
+}
+
+/* 漢堡選單 (手機) */
+.hamburger {
+    display: none;
+    font-size: 26px;
     background: none;
     border: none;
-    color: #333;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 5px 10px;
-    line-height: 1.5;
-    display: flex;
-    align-items: center;
-}
-
-
-
-
-/* 下拉選單 */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    display: none;
-    background: white;
-    border: 1px solid #ccc;
-    min-width: 100px;
-    z-index: 10;
-    padding: 0px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-
-
-
-
-
-/* ✅ 分隔線樣式 */
-.dropdown-menu a {
-    display: block;
-    padding: 8px 12px;
-    color: #333;
-    text-decoration: none;
-    text-align: left;
-    border-bottom: 0.1px solid black;
-
-}
-
-.dropdown-menu a:hover {
-    background-color: #f0f0f0;
-}
-
-
-.dropdown-menu a:last-child {
-    border-bottom: none;
-}
-
-.dropdown-menu[class^="menu-"] a {
-    display: block;
-    padding: 8px 12px;
-    color: #333;
-    text-decoration: none;
-    text-align: left;
-}
-
-
-
-
-.dropdown-menu.menu-60 {
-    min-width: 60px;
-}
-
-
-
-.dropdown-menu.menu-80 {
-    min-width: 80px;
-
-}
-
-
-.dropdown-menu.menu-100 {
-    min-width: 100px;
-}
-
-
-.dropdown-menu.menu-114 {
-    min-width: 114px;
-}
-
-
-
-
-
-.dropdown:hover .dropdown-menu {
-    display: block;
 }
 
 
@@ -192,24 +108,16 @@ nav a,
     color: white;
     width: 900px;
     height: 200px;
-    font-size: 36px;
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 700;
 }
 
 .banner-text h1 {
-    font-family: 'Alegreya Sans', sans-serif;
     font-size: 28px;
     letter-spacing: 1.6px;
     margin-top: 110px;
 
 }
-
-
-
-
-
-
 
 
 .carousel-btn {
@@ -225,21 +133,446 @@ nav a,
 }
 
 
+.footer {
+    background-color: #f1effb;
+    padding: 40px 20px;
+    margin-top: 100px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    gap: 0;
+}
+
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 20px;
+    letter-spacing: 1.6px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.map-container {
+    width: 432px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 360px;
+}
+
+
+/* 摩洛哥新增 */
+
+.hero-carousel {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 輪播上的文字 */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1.6px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 0 20px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* 輪播左右箭頭（針對 hero-carousel） */
+.hero-carousel .swiper-button-prev,
+.hero-carousel .swiper-button-next,
+.travel-card-carousel .swiper-button-prev,
+.travel-card-carousel .swiper-button-next
+{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    width: 36px;
+    height: 36px;
+}
+
+/* 摩洛哥介紹卡片 */
+
+.travel-card {
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.travel-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* 輪播圖片區 */
+.travel-card-carousel {
+    flex: 1 1 500px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.travel-card-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 文字區塊 */
+.travel-card-info {
+    flex: 1 1 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.travel-card-title {
+    font-size: 24px;
+    color: #234;
+    letter-spacing: 1.6px;
+    font-weight: bold;
+}
+
+.travel-card-subtitle {
+    font-size: 20px;
+    letter-spacing: 1.6px;
+    color: #666;
+}
+
+/* 項目清單樣式 */
+.travel-card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    margin-top: 10px;
+    letter-spacing: 1.6px;
+}
+
+.travel-card-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 16px;
+    color: #123;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+.travel-card-list li img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.travel-card-list li span {
+    display: block;
+    color: #555;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    margin-top: 2px;
+}
+
+.contact-expert {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 60px;
+}
+
+.contact-button {
+    width: 220px;
+    max-width: 90%;
+    background-color: #0077cc;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1.6px;
+    font-weight: bold;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #005fa3;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 480px) {
+    .banner-text h1 {
+        font-size: 18px;
+
+    }
+
+    .city .card-list {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 320px;
+    }
+
+    .txt h3 {
+        font-size: 18px;
+    }
+
+    .txt p {
+        font-size: 14px;
+        padding-left: 32px;
+    }
+
+
+    .price {
+        font-size: 18px;
+
+    }
+
+    .price .currency,
+    .price .note {
+        font-size: 14px;
+    }
+
+    .International-City {
+        width: 90vw;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .International-City:active {
+        transform: scale(1.05);
+        z-index: 1;
+    }
+
+
+    .International-City img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 13;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    .International-City .name {
+        font-size: 14px;
+    }
+
+    .location-overlay {
+        top: 0.5%;
+        left: 0.5%;
+        bottom: auto;
+    }
+
+    .location-overlay .icon img {
+        width: 24px;
+    }
+
+    .location-overlay .text {
+        font-size: 14px;
+    }
+
+    .inforow {
+        justify-content: flex-start;
+        padding-left: 26px;
+    }
+
+    .inforow .icon {
+        margin-right: 6px;
+        width: 24px;
+    }
+
+    .inforow .text {
+        font-size: 14px;
+    }
+
+    .map-container {
+        max-width: 80vw;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        color: #333;
+    }
+
+    /* 摩洛哥輪播 */
+    .hero-carousel {
+        height: 260px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .travel-card-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .travel-card-carousel {
+        width: 100%;
+        max-width: 390px;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .travel-card-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+    .travel-card-info {
+        gap: 12px;
+    }
+
+    .travel-card-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .travel-card-subtitle {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .travel-card-list li {
+        font-size: 15px;
+    }
+
+    .travel-card-list li img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+
+
+
+
+
 /* 1. 平板寬度調整：768px 以下 */
 @media (max-width: 768px) {
 
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .nav-left,
-    .nav-right {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
 
     .banner {
         height: auto;
@@ -247,7 +580,6 @@ nav a,
 
     .banner-text {
         width: 90%;
-        font-size: 24px;
         height: auto;
     }
 
@@ -314,113 +646,6 @@ nav a,
         padding: 3px 6px;
     }
 
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .footer-column {
-        width: 100%;
-    }
 
-    .icon-group {
-        justify-content: center;
-    }
 }
-
-/* 2. 手機寬度：480px 以下，卡片與內容再收窄  */
-@media (max-width: 480px) {
-    .banner-text h1 {
-        font-size: 18px;
-
-    }
-
-    .city .card-list {
-        flex-direction: column !important;
-        align-items: center;
-    }
-
-    .card {
-        max-width: 320px;
-    }
-
-    .txt h3 {
-        font-size: 18px;
-    }
-
-    .txt p {
-        font-size: 14px;
-        padding-left: 32px;
-    }
-
-
-    .price {
-        font-size: 18px;
-        
-    }
-
-    .price .currency,
-    .price .note {
-        font-size: 14px;
-    }
-
-    .International-City {
-        width: 90vw;
-        max-width: 350px;
-        height: auto;
-        margin: 0 auto 24px;
-        transition: transform 0.3s ease;
-    }
-
-    .International-City:active {
-        transform: scale(1.05);
-        z-index: 1;
-    }
-
-
-    .International-City img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 13;
-        object-fit: cover;
-        display: block;
-    }
-
-
-    .International-City .name {
-        font-size: 14px;
-    }
-
-    .location-overlay {
-        top: 0.5%;
-        left: 0.5%;
-        bottom: auto;
-    }
-
-    .location-overlay .icon img {
-        width: 24px;
-    }
-
-    .location-overlay .text {
-        font-size: 14px;
-    }
-
-    .inforow {
-        justify-content: flex-start;
-        padding-left: 26px;
-    }
-
-    .inforow .icon {
-        margin-right: 6px;
-        width: 24px;
-    }
-
-    .inforow .text {
-        font-size: 14px;
-    }
-}
-
-
-
-
-

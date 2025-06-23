@@ -103,7 +103,7 @@
 
 
 
-.card .info {   
+.card .info {
     padding: 0px 12px;
     padding-bottom: 6px;
     font-size: 20px;
@@ -122,8 +122,8 @@
 
 .inforow {
     display: flex;
-    
-    }
+
+}
 
 
 
@@ -137,7 +137,7 @@
 .info-row .text {
     font-size: 20px;
     letter-spacing: 1.6px;
-    
+
 }
 
 
@@ -150,8 +150,7 @@
     padding-top: 6px;
 }
 
-.price,
-.info-item .price {
+.price {
     font-size: 22px;
     line-height: 2px;
     letter-spacing: 1.6px;
@@ -187,7 +186,7 @@
     margin: 0 auto;
     padding: 0 16px;
 
-    
+
 }
 
 
@@ -220,8 +219,8 @@
     transition: flex 0.3s ease;
     overflow: hidden;
     height: 287px;
-    
-    
+
+
 }
 
 .International-City img {
@@ -259,58 +258,7 @@
 }
 
 
-/* 整體頁尾背景與置中 */
-.footer {
-    background-color: #f1effb;
-    padding: 40px 20px;
-    margin-top: 100px;
-}
 
-/* 頁尾容器寬度為1200px並置中 */
-.footer-container {
-    max-width: 1200px;
-    height: 245px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* 每一欄的樣式 */
-.footer-column {
-    flex: 1 1 200px;
-    text-align: center;
-    /* 文字置中 */
-}
-
-
-
-.footer-column h4 {
-    font-size: 20px;
-    letter-spacing: 1.6px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-/* 列表樣式 */
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-
-
-.footer-column a {
-    text-decoration: none;
-    /* 移除底線 */
-    color: inherit;
-    /* 使用原本文字顏色 */
-    display: inline-block;
-    /* 保持與 <li> 配合 */
-}
 
 .card a {
     text-decoration: none;
@@ -318,28 +266,16 @@
 }
 
 
-.footer-column li {
-    font-size: 16px;
-    letter-spacing: 1.6px;
-    margin: 10px 0;
-    line-height: 40px;
 
-    margin-bottom: 15px;
-
-}
 
 /* 圖示群組排版 */
 .icon-group {
 
-    /* display: grid;
-    grid-template-columns: repeat(2, auto); 一行兩個 icon */
     display: flex;
     flex-wrap: wrap;
 
     gap: 20px 40px;
-    /* 上下左右間距更均勻 */
     justify-content: center;
-    /* 整體置中對齊 */
     margin-top: 40px;
 }
 
@@ -352,34 +288,97 @@
 
 }
 
-.social-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-/* 付款方式圖示：橫向排列，每行最多三個，自動換行 */
-.payment-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-    max-width: 180px; 
-}
-
-/* PayPal 圖示例外處理（如比例不同） */
-.payment-icons img.paypal {
-    width: 45px;
-    height: 45px;
-}
-
-
 
 .f-txt .top {
     margin-top: 25px;
 }
 
 
+
+/* 摩洛哥行程介紹 */
+
+
+.itinerary-card {
+    width: 100%;
+    padding: 60px 20px;
+    
+}
+
+.itinerary-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #f7f7f7;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itinerary-card-image {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.itinerary-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.itinerary-card-text {
+    width: 600px;
+}
+
+.itinerary-title {
+    font-size: 28px;
+    color: #234;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+
+.itinerary-paragraph {
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 28px;
+}
+
+
+
+@media (max-width: 480px) {
+    .itinerary-card-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .itinerary-card-image,
+    .itinerary-card-text {
+        width: 100%;
+    }
+
+    .itinerary-card-image {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .itinerary-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .itinerary-paragraph {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
