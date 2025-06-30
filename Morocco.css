@@ -1,4 +1,3 @@
-
 .card-group {
     width: 1200px;
     height: 506px;
@@ -12,7 +11,8 @@
     flex-direction: row-reverse;
 }
 
-.card-img, .card-text {
+.card-img,
+.card-text {
     width: 600px;
     height: 506px;
     flex-shrink: 0;
@@ -24,8 +24,9 @@
     height: 100%;
     /* object-fit: cover;
     display: block; */
-    object-fit: cover; /* 確保圖片填滿容器但不變形 */
-    object-position: center center; 
+    object-fit: cover;
+    /* 確保圖片填滿容器但不變形 */
+    object-position: center center;
 
 }
 
@@ -38,7 +39,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* text-align: center; */
 }
 
 
@@ -58,10 +58,10 @@
     margin: 40px auto;
     display: flex;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     gap: 40px;
-    margin-top:120px;
+    margin-top: 120px;
 }
 
 .swiper {
@@ -104,6 +104,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
 }
 
 
@@ -111,14 +112,15 @@
 .info-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 10px;
+    margin: -10px 0;
 }
 
 .info-item img {
     width: 30px;
     height: 30px;
-    margin-right: 20px;
-    margin-top: 0px; /* 對齊文字用 */
+    margin-left: -55px;
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
 .info-text {
@@ -134,7 +136,7 @@
 }
 
 .info-text h4 {
-    margin: 0;
+    margin-top: 10px;
     font-size: 18px;
     letter-spacing: 5.4px;
 }
@@ -142,7 +144,7 @@
 
 .info-text p {
     margin: 0;
-    font-size:16px;
+    font-size: 16px;
     letter-spacing: 4.8px;
 }
 
@@ -150,7 +152,7 @@
 
 
 .price {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 25px;
     letter-spacing: 7.5px;
@@ -159,4 +161,72 @@
 
 
 
+@media (max-width: 430px) {
 
+    .morocco-card {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+        overflow: hidden;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+    }
+
+    .info {
+        padding: 0 10px;
+    }
+
+    .info-item {
+        margin: 10px 0;
+        gap: 10px;
+    }
+
+    .info-item img {
+        width: 24px;
+        height: 24px;
+        margin-left: 0;
+        margin-right: 8px;
+        margin-top: 2px;
+    }
+
+    .info-text h3 {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .info-text h4 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .info-text p {
+        font-size: 14px;
+        letter-spacing: 1.6px;
+    }
+
+    .price {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .price .currency {
+        font-size: 16px;
+    }
+
+    .price .note {
+        font-size: 14px;
+    }
+
+}
